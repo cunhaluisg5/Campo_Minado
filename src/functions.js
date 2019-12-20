@@ -66,13 +66,13 @@ const safeNeighborhood = (board, row, columns) => {
     return getNeighbors(board, row, columns).reduce(safes, true)
 }
 
-const openField = (board, row, columns) => {
+const openField = (board, row, column) => {
     const field = board[row][column]
     if(!field.opened) {
         field.opened = true
         if(field.mined) {
             field.exploded = true
-        }else if(safeNeighborhood(board, row, columnn)) {
+        }else if(safeNeighborhood(board, row, column)) {
             getNeighbors(board, row, column)
             .forEach(n => openField(board, n.row, n.column))
         }else {
