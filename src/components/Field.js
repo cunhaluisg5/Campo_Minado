@@ -1,8 +1,8 @@
-import React from 'react';
-import { View, StyleSheet, Text, TouchableWithoutFeedback } from 'react-native';
-import params from '../params';
-import Mine from './Mine';
-import Flag from './Flag';
+import React from 'react'
+import { View, StyleSheet, Text, TouchableWithoutFeedback } from 'react-native'
+import params from '../params'
+import Mine from './Mine'
+import Flag from './Flag'
 
 export default props => {
     const { mined, opened, nearMines, exploded, flagged } = props
@@ -39,27 +39,27 @@ const styles = StyleSheet.create({
     field: {
         height: params.blockSize,
         width: params.blockSize,
-        borderWidth: params.borderSize
+        borderWidth: params.borderSize,
     },
     regular: {
         backgroundColor: '#999',
         borderLeftColor: '#CCC',
         borderTopColor: '#CCC',
         borderRightColor: '#333',
-        borderBottomColor: '#333'
+        borderBottomColor: '#333',
     },
     opened: {
         backgroundColor: '#999',
         borderColor: '#777',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     label: {
         fontWeight: 'bold',
-        fontSize: params.fontSize
+        fontSize: params.fontSize,
     },
     exploded: {
         backgroundColor: 'red',
-        borderColor: 'red'
+        borderColor: 'red',
     }
 })
